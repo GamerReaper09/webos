@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="module" src="./script.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+    </head>
+    <body style=" background-image: url(./assets/Terraria_main_menu.jpg);background-size:cover; overflow:hidden;">
+        <div id="welcome" class="window" style="width:280px; backdrop-filter:blur(5px);top:50%; left:50%; transform:translate(-50%, -50%);background-color:rgba(0,0,0,0);">
+            <div id="welcomeheader" class="windowheader">
+                <p style="margin:0 8px;user-select:none;">Welcome</p>
+                <div id="welcomeclose" class="closebutton"></div>
+            </div>
+            <h1 style="margin-left:16px">TerraOS</h1>
+            <p style="margin:16px">TerraOS is a WebOS based on Terraria</p>
+        </div>
+
+        <div class="topbar"id="top" style="position:relative;">
+            <p style="margin-left:16px;background-color:#342df4; padding: 4px 12px; border-radius:8px; font-weight:600; cursor: pointer;"id="welcomeOpen" >TerraOS</p>
+            <p style="transform:translate(0,-20%);font-size:0.7rem;">Now with more ducks!</p>
+            <div style="display:flex; justify-content: space-between;">
+                <img src="./assets/Stopwatch.png" style="height:24px; margin:16px 12px;">
+                <p style="margin-right:16px;background-color:#342df4; padding: 4px 12px; border-radius:8px;" id="timeElement">Time</p>
+            </div>
+        </div>
+        <div id="desktop" style="padding-top: 32px;padding-left:16px;display:flex;">
+            <div id="notesopen"style="text-align: center; width: fit-content;">
+                <img src="./assets/Book.png" style="width: 64px; height: 64px;"/>
+                <p style="margin:0;color:#fff">Notepad</p>
+            </div>
+            <div id="terradleopen" style="text-align: center;margin-left:16px; width: fit-content;">
+                <img src="./assets/terraria-icon.png" style="width:64px;height:64px;">
+                <p style="margin:0;color:#fff">Terradle</p>
+            </div>
+            <div id="musicopen" style="text-align: center;margin-left:16px; width: fit-content;">
+                <img src="./assets/Music_Box.png" style="width:64px;height:64px;">
+                <p style="margin:0;color:#fff">Music player</p>
+            </div>
+        </div>
+        <div class="window" id="notes" style="top: calc(50% - 240px);left:calc(50% - 260px);display:none">
+            <div class="windowheader" id="notesheader">
+                <p style="margin:0 8px; user-select: none;">Notepad</p>
+                <div class="closebutton" id="notesclose"></div>
+            </div>
+            <div style="margin:6px; border-radius:12px;width:520px;height:480px; background-color:#ece7e3; display:flex;">
+                <div style="height:calc(100% - 48px);width:25%; background-color:#d3d2d1; margin:8px 8px; border-radius:16px; padding:16px" id="notesidebar">
+                </div>
+                <div style="overflow-y: scroll;width:75%;scrollbar-color:#d3d2d1 #ece7e3;"id="notescontent">
+                    <p contenteditable="True">Super epic notes for any <strong>cool</strong> person. Also this notepad can be used for random things like writing, typing and maybe even texting!!</p>
+                </div>
+            </div>
+        </div>
+        <div class="window" id="terradle" style="top: 300px; left:500px; display:none">
+            <div class="windowheader" id="terradleheader">
+                <p style="margin:0 8px; user-select: none;">Terradle</p>
+                <div class="closebutton" id="terradleclose"></div>
+            </div>
+            <iframe src="https://www.terradle.com/" style="width:500px;height:700px;"></iframe>
+        </div>
+        <div class="window" id="music" style="top: 300px; left:500px; display:flex">
+            <div class="windowheader" id="musicheader">
+                <p style="margin:0 8px; user-select: none;">Music player</p>
+                <div class="closebutton" id="musicclose"></div>
+            </div>
+            <div style="padding:16px;text-align: center; user-select: none;font-size:2rem;">
+                <p id="song">Overworld</p>
+                <div style="display:flex; justify-content: center;">
+                    <p style="cursor: pointer;">▶️</p>
+                    <p style="cursor: pointer;">⏸️</p>
+                    <p style="cursor: pointer;">⏩</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

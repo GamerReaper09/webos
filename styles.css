@@ -1,0 +1,42 @@
+.topbar {
+    display:flex; 
+    justify-content:space-between;
+    background-color:rgba(100, 136, 248, 0.5); 
+    color:#fff;
+    border-radius:8px;
+}
+.selected {
+    filter:drop-shadow(0 0 8px rgb(255,255,255))
+}
+.window {
+    border:solid 1px;
+    border-radius:16px;
+    width:fit-content;
+    padding:0px;
+    position:absolute;
+    box-shadow: black 3px 3px 4px;
+    display:flex;
+    flex-direction:column;
+    background-color:hsl(0, 0%, 96%);
+
+}
+.windowheader {
+    background-color:rgba(168, 168, 168, 0.5); 
+    border-radius:16px 16px 0 0; 
+    height:20px; 
+    display:flex; 
+    justify-content: space-between; 
+    margin:0;
+}
+.closebutton {
+    margin:2px 8px;
+    cursor:pointer; 
+    background-color:red; 
+    border-radius:16px;
+    width:16px;
+    height:16px;
+}
+.headertitle {
+    margin:0 8px;
+    user-select:none;
+}
