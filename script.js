@@ -13,8 +13,55 @@ var terradlescreen = document.querySelector("#terradle")
 var musicScreen = document.querySelector("#music")
 var musicopen = document.querySelector("#musicopen")
 var topBar = document.querySelector("#top")
+var musicplay = document.querySelector("#musicplay")
+var musicprevious = document.querySelector("#musicprevious")
+var musicnext = document.querySelector("#musicnext")
+var musictitle = document.querySelector("#song")
+var audio = document.querySelector("#audio")
 var selectedIcon = undefined
 var biggestIndex = 1;
+
+var index = 0;
+var songs = [
+  {title:"Overworld", src: "./assets/Music-Overworld_Day.mp3"},
+  {title:"Snow",src:"./assets/Music-Snow.mp3"},
+  {title:"Underground",src:"./assets/Music-Underground.mp3"},
+  {title:"Plantera",src:"./assets/Music-Plantera.mp3"},
+  {title:"Day remix",src:"./assets/Music-Contest_Winner.mp3"}
+
+]
+
+function loadSong() {
+  audio.src = songs[index].src;
+  musictitle.innerHTML = songs[index].title;
+}
+function toggleMusic() {
+  if (audio.paused) {
+    audio.play()
+    musicplay.innerHTML = "⏹️";
+  }
+  else {
+    audio.pause();
+    musicplay.innerHTML = "▶️"
+  }
+}
+function nextSong() {
+  index = (index+1)% songs.length;
+  loadSong()
+  toggleMusic()
+}
+function previousSong() {
+  index = (index-1+songs.length)%songs.length;
+  loadSong();
+  toggleMusic();
+}
+
+musicplay.addEventListener("click", toggleMusic)
+musicnext.addEventListener("click", nextSong)
+musicprevious.addEventListener("click",previousSong)
+
+loadSong()
+
 
 var content = [
   {

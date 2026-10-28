@@ -61,12 +61,13 @@
                 <p style="margin:0 8px; user-select: none;">Music player</p>
                 <div class="closebutton" id="musicclose"></div>
             </div>
-            <div style="padding:16px;text-align: center; user-select: none;font-size:2rem;">
-                <p id="song">Overworld</p>
+            <div style="padding:16px;text-align: center; user-select: none;font-size:2rem;background-image:url(./assets/Music_Background.png); background-size:cover; width:200px">
+                <p id="song" style="color:#Fff">Overworld</p>
+                <audio id="audio" preload="metadata"></audio>
                 <div style="display:flex; justify-content: center;">
-                    <p style="cursor: pointer;">▶️</p>
-                    <p style="cursor: pointer;">⏸️</p>
-                    <p style="cursor: pointer;">⏩</p>
+                    <p style="cursor: pointer;" id="musicprevious">⏪</p>
+                    <p style="cursor: pointer;" id="musicplay">▶️</p>
+                    <p style="cursor: pointer;" id="musicnext">⏩</p>
                 </div>
             </div>
         </div>
