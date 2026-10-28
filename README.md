@@ -12,4 +12,5 @@ Apps can be opened by pressing the appicons. Windows can be moved by dragging th
 * Awsome design (If you like terrarias)
 * Simple ui
 
-
+## Credits
+Credits to Re-Logic for the epic game terraria and also to the terraria wiki for some assets.
